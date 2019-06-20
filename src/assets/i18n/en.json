@@ -1,0 +1,9 @@
+{
+  "subReddit": {
+    "comment": "comments",
+    "search" : "search",
+    "posted": "posted about",
+    "for": "for a",
+    "hours_ago_by": "hours ago by"
+  }
+}

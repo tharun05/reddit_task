@@ -1,0 +1,12 @@
+<div class="container" *ngFor="let item of redditList">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <h3>
+        <a href="{{item.data.url}}" tabindex="0">{{item.data.title}}</a></h3>
+      <p>
+        <a href="https://www.reddit.com/{{item.data.permalink}}" tabindex="0">{{item.data.num_comments}} {{'subReddit.comment' | translate}}</a><span tabindex="0"></span>
+      </p>
+      <p class="text-muted" tabindex="0">{{'subReddit.posted' | translate}} 8 {{ 'subReddit.hours_ago_by' | translate}} {{item.data.author}}</p>
+    </div>
+  </div>
+</div>
