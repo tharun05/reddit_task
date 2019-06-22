@@ -10,7 +10,6 @@ export class SubredditlistComponent implements OnInit, OnChanges {
   redditList: any;
   @Input() InputValue;
   constructor(private redditService: RedditService) {
-    console.log(this.InputValue);
   }
 
   ngOnInit() {
@@ -23,7 +22,6 @@ export class SubredditlistComponent implements OnInit, OnChanges {
   getSubRedditList(type: any){
     this.redditService.getRedditDataList(type).subscribe((redditData:any) => {
       this.redditList = redditData.data.children;
-      console.log(this.redditList)
     });
   }
 
