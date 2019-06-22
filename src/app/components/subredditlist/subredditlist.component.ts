@@ -27,7 +27,7 @@ export class SubredditlistComponent implements OnInit, OnChanges {
 
   ngOnChanges(changes: SimpleChanges) {
     const changeValue: SimpleChange = changes['InputValue'];
-    if (changeValue && changeValue.previousValue != changeValue.currentValue) {
+    if (changeValue && changeValue.previousValue !== changeValue.currentValue) {
       this.InputValue = changeValue.currentValue;
 
       if (!!this.InputValue) {

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { TranslateService } from '@ngx-translate/core';
+import {StorageService} from './shared/services/storage.service';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,8 @@ export class AppComponent implements OnInit{
   subRedditValue:any = null;
   langCode: any;
   constructor(
-    private translate: TranslateService
+    private translate: TranslateService,
+    private storageService: StorageService
   ) {
 
   }
@@ -24,7 +26,7 @@ export class AppComponent implements OnInit{
   ngOnInit() {
     this.translate.addLangs(['en', 'fr']);
     const browserLang = this.translate.getBrowserLang();
-    this.langCode = sessionStorage.getItem('lang');
+    this.langCode = this.storageService.retrieveFromWebStorage('lang');
     this.translate.use(this.langCode);
   }
 }
