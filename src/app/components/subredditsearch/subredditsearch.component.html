@@ -2,25 +2,24 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8">
-    <div class="navbar-header">
-      <b class="navbar-brand">RedditLite</b>
-    </div>
-    <div class="input-group search-bar">
-      <input type="text" placeholder="Search for a subreddit" class="form-control" [(ngModel)]="subRedditValue" aria-describedby="search-bar-help">
-      <div id="search-bar-help" class="offscreen"></div>
-      <span class="input-group-btn"><button type="submit" class="btn btn-secondary" (click)="searchSubReddit(subRedditValue)">{{ 'subReddit.search' | translate}}</button></span>
-    </div>
+        <div class="navbar-header">
+          <b class="navbar-brand">RedditLite</b>
+        </div>
+        <div class="input-group search-bar">
+          <input type="text" placeholder="Search for a subreddit" class="form-control" [(ngModel)]="subRedditValue" aria-describedby="search-bar-help">
+          <div id="search-bar-help" class="offscreen"></div>
+          <span class="input-group-btn"><button type="submit" class="btn btn-secondary" (click)="searchSubReddit(subRedditValue)">{{ 'subReddit.search' | translate}}</button></span>
+        </div>
       </div>
       <div class="col-md-4">
-    <ul class="dropdown input-group">
-      <li>
-        <select #langSelect (change)="translate.use(langSelect.value)" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-          <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang === 'en' ? 'English' : 'French'}}</option>
-        </select>
-      </li>
-    </ul>
+        <ul class="dropdown input-group">
+          <li>
+            <select #langSelect (change)="translate.use(langSelect.value)" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+              <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang === 'en' ? 'English' : 'French'}}</option>
+            </select>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
-
 </nav>

@@ -12,7 +12,6 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { SubredditsearchComponent } from './components/subredditsearch/subredditsearch.component';
 import { SubredditlistComponent } from './components/subredditlist/subredditlist.component';
 import { FormsModule } from '@angular/forms';
-import { StorageServiceModule} from 'angular-webstorage-service';
 
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -30,7 +29,6 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    StorageServiceModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
