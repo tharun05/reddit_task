@@ -5,6 +5,7 @@ import { Props } from '../../constants/props';
 import {environment} from '../../../environments/environment';
 
 Props.API_END_POINT = environment.API_END_POINT;
+
 @Injectable()
 export class HttpService {
   private host = Props.API_END_POINT;
